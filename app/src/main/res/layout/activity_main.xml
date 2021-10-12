@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/eingabefeld"
+        android:layout_width="wrap_content"
+        android:layout_height="87dp"
+        android:layout_marginBottom="164dp"
+        android:inputType="number"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#292828"
+        android:textColorHighlight="#373434"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="00" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="69dp"
+        android:layout_height="86dp"
+        android:textColor="#191818"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/eingabefeld"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0s"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/startStopp"
+        android:layout_width="121dp"
+        android:layout_height="57dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Start"
+        android:textSize="16sp"
+        app:backgroundTint="#9E1732"
+        app:layout_constraintBottom_toTopOf="@+id/eingabefeld"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fortschrittsanzeige" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Timer" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="54dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/presence_away" />
+
+    <ProgressBar
+        android:id="@+id/fortschrittsanzeige"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="266dp"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/eingabefeld"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <TextView
+        android:id="@+id/anzeigefeld"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eingabefeld"
+        tools:text="Startzeit:" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
